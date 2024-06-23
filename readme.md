@@ -69,11 +69,11 @@ console.log(msg);
 06.22　 カードでコンテンツをまとめる方法、ジャンボトロンについて学ぶ   
 画像は挿入に不明点  
 呼び出し元のファイルから見て、同じフォルダーに画像が保存されている場合  
-→\<img src=image.jpeg>  
+→\<img src=image.jpg>  
 画像は挿入されず。  
    
 一方で、別のフォルダー(呼び出し元と同じ階層にあるフォルダー)staticから、image.jpegを呼び出すために  
-→\<img src="static/image.jpeg">  
+→\<img src="static/image.jpg">  
 とすると、画像は挿入された  
 
 何故??  
