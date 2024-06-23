@@ -63,8 +63,11 @@ console.log(msg);
 \<p id="msg">文字\</p>  
 を{% block content %}に入れることで解決した!  
   
-<hr>
+<hr>  
+
+  
 06.22　 カードでコンテンツをまとめる方法、ジャンボトロンについて学ぶ   
+画像は挿入に不明点  
    
 一方で、別のフォルダー(呼び出し元と同じ階層にあるフォルダー)staticから、image.jpegを呼び出すために  
 →\<img src="static/image.jpeg">  
