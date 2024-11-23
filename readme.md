@@ -121,6 +121,44 @@ console.log(msg);
 ・横並びにする要素を指定する時に、\<div>タグで分けることが必要  
 など  
 
+11.23　sqlalchemyでデータベース作成を行った...ここでデータベース作成に多くのエラーが発生したので、解決した方法を記載  
+まず、sqlalchemyをimportする際のコード  
+
+from datetime import datetime  
+import pytz  
+from flask_sqlalchemy import SQLAlchemy  
+from sqlalchemy.ext.declarative import declarative_base  
+from sqlalchemy.orm import DeclarativeBase  
+  
+class Base(DeclarativeBase):  
+  pass  
+  
+db = SQLAlchemy(app)  
+  
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"  
+db.init_app(app)  
+  
+class Post(db.Model):  
+    id = db.Column(db.Integer, primary_key=True)  
+    title = db.Column(db.String(80), nullable=False)  
+    body = db.Column(db.String(300), nullable=False)  
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.now(pytz.timezone('Asia/Tokyo')))  
+
+このようなコードを書いてコマンドプロンプトでデータベースを作成する際にエラーが発生した。  
+
+Flask-SQLAlchemyを使用しているコードで、アプリケーションコンテキストがない状態でcreate_all()や他のFlask-SQLAlchemy関連の機能を呼び出そうとしたため発生した、ということなので  
+
+class Post(db.Model):
+　　id = ...  
+  　title = ...  
+    body = ...
+    created_at = ...
+の後に  
+with app.app_context():  
+    db.create_all()  
+を挿入  
+  
+
 ## 分からなかった用語のまとめ欄  
 ### GitHub  
 <基本的な知識>  
