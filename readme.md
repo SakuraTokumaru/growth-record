@@ -131,20 +131,25 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.declarative import declarative_base  
 from sqlalchemy.orm import DeclarativeBase  
   
+app = Flask(__name__)  
+  
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"  
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  
+  
 class Base(DeclarativeBase):  
   pass  
   
 db = SQLAlchemy(app)  
   
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"  
-db.init_app(app)  
+  
   
 class Post(db.Model):  
     id = db.Column(db.Integer, primary_key=True)  
     title = db.Column(db.String(80), nullable=False)  
     body = db.Column(db.String(300), nullable=False)  
-    created_at = db.Column(db.DateTime, nullable=False, default=datetime.now(pytz.timezone('Asia/Tokyo')))  
-
+    created_at = db.Column(db.DateTime, nullable=False,   
+ default=datetime.now(pytz.timezone('Asia/Tokyo')))    
+  
 このようなコードを書いてコマンドプロンプトでデータベースを作成する際にエラーが発生した。  
 
 Flask-SQLAlchemyを使用しているコードで、アプリケーションコンテキストがない状態でcreate_all()や他のFlask-SQLAlchemy関連の機能を呼び出そうとしたため発生した、ということなので  
