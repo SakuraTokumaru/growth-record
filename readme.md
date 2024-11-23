@@ -161,13 +161,13 @@ with app.app_context():
 
   
 コマンドプロンプトの操作に数行追加  
->python　　(対話モード)  
->>>from app import db
->>>db.create_all()　　! 先ほどはここでエラーが発生
->>>from app import app　　! 追記文1
->>>app.app_context().push()　　! 追記文2
->>>from app import db　　! 追記文3
->>>db.create_all()
+\>python　　(対話モード)  
+\>\>\>from app import db  
+\>\>\>db.create_all()　　! 先ほどはここでエラーが発生  
+\>\>\>from app import app　　! 追記文1  
+\>\>\>app.app_context().push()　　! 追記文2  
+\>\>\>from app import db　　! 追記文3  
+\>\>\>db.create_all()  
   
 project.dbというデータベースの作成ができた！  
 追記文2を加えることで、instanceディレクトリが作成されます。その下に自分の作ったデータベース(db)が作成されているのでチェック。  
