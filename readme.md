@@ -122,6 +122,7 @@ console.log(msg);
 など  
 
 11.23　sqlalchemyでデータベース作成を行った...ここでデータベース作成に多くのエラーが発生したので、解決した方法を記載  
+<hr>
 まず、sqlalchemyをimportする際のコード  
 
 from datetime import datetime  
@@ -158,6 +159,7 @@ with app.app_context():
     db.create_all()  
 を挿入  
   
+<hr>    
 
 ## 分からなかった用語のまとめ欄  
 ### GitHub  
