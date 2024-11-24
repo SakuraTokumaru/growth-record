@@ -131,7 +131,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.declarative import declarative_base  
 from sqlalchemy.orm import DeclarativeBase  
   
-app = Flask(\__name\__)  
+app = Flask(\_\_name\_\_)  
   
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"  
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  
