@@ -179,6 +179,16 @@ project.dbというデータベースの作成ができた！
   
 <hr>    
 
+2025.05.20 VScodeのファイルとフォルダ一覧が表示されなくなった
+開いているエディタ、アウトライン、タイムラインしか選択できない状態  
+解決策  
+1.コマンド入力を開く  
+Ctrl+Shift+P (Windows/Linux)  
+Cmd+Shift+P (Mac)  
+2.コマンド入力  
+View: Reset View Locations  
+  
+
 ## 分からなかった用語のまとめ欄  
 ### GitHub  
 <基本的な知識>  
@@ -203,5 +213,7 @@ project.dbというデータベースの作成ができた！
 #### commit コミット  
 #### marge マージ  
 #### clone クローン  
+
+
 
   
