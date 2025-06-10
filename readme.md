@@ -187,6 +187,11 @@ Ctrl+Shift+P (Windows/Linux)
 Cmd+Shift+P (Mac)  
 2.コマンド入力  
 View: Reset View Locations  
+
+06.10 チーム開発でブランチからマージしてmainを更新した。他のブランチはプルしてもmainの更新が反映されない  
+解決策　VScodeのターミナルで  
+git pull origin main  
+のコマンドを打ち、ローカルmainのブランチをリモートmainのブランチの無いように更新して最新化する。  
   
 
 ## 分からなかった用語のまとめ欄  
