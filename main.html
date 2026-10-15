@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">//この行で、style.cssを読み込んでいます。cssファイルは、htmlファイルと同じ階層に置いてください。
+    <script src="script.js" defer></script>//この行で、script.jsを読み込んでいます。jsファイルは、htmlファイルと同じ階層に置いてください。
+    <title>Document</title>
+</head>
+
+//htmlの中身を記述する場所です。htmlの中に、headタグとbodyタグがあります。webブラウザ上で見えるのはheadタグの中に書いた内容です。
+<body>
+    <button id="myButton">Click</button>
+    <h1 id = "title">これはタイトルタグです</h1>
+    <p class = "description">これはpタグで、説明文や文章の記述に使います</p>
+    <img class = "image" src = "description.jpg" alt = "練習用画像">
+    <p class = 'message'>これはmarginを使って、左側を空けています。marginは画像などにも適用できます</p>
+    <p class = 'center-message'>これは、中央揃えにしています。中央揃えにしたい時は、text-align: center; を使います</p>
+    
+    <p>これは、横並びの画像です</p>
+    <p class = "mini">①flexで指定しています</p>
+    <div class = "container">
+        <img class = "image" src = "description.jpg" alt = "練習用画像">
+        <img class = "image" src = "description.jpg" alt = "練習用画像">
+        <img class = "image" src = "description.jpg" alt = "練習用画像">
+    </div>
+
+    <p class = "mini">②gridで指定しています</p>
+    <div class = "container-1">
+        <img class = "grid-item" src = "description.jpg" alt = "練習用画像">
+        <img class = "grid-item" src = "description.jpg" alt = "練習用画像">
+        <img class = "grid-item" src = "description.jpg" alt = "練習用画像">
+    </div>
+
+    <div class="box-zone">
+    <p>ここにボックスを配置します(ノーマルはこの状態)</p>
+    <div class="set">
+    <div class="box"></div>
+        <div class="box" style="height: 120px;"></div>
+        <div class="box" style="height: 60px;"></div>
+    </div>
+    
+    <p>以下の横並びのボックスを、左右の真ん中の位置にしてみます</p>
+    <div class="display-flex">
+        <div class="box"></div>
+        <div class="box" style="height: 120px;"></div>
+        <div class="box" style="height: 60px;"></div>
+    </div>
+
+    <p>以下の横並びのボックスを上下の中央揃えにしてみます</p>
+    <div class="content-center">
+        <div class="box"></div>
+        <div class="box" style="height: 120px;"></div>
+        <div class="box" style="height: 60px;"></div>
+    </div>
+    </div>
+
+    <p>以下はテキストのボックスをいくつかに分けて、表示しています</p>
+    <div class="text-zone">
+        <div class="text-box">
+            <p class="text-container">これは、テキストのボックスです。テキストのボックスは、divタグで囲むことで作ることができます。テキストボックスを作る都合上、分量は多めにしておいています。</p>
+        </div>
+        <div class="text-box">
+            <p class="text-container">これは、テキストのボックスです。テキストのボックスは、divタグで囲むことで作ることができます。テキストボックスを作る都合上、分量は多めにしておいています。</p>
+        </div>
+        <div class="text-box">
+            <p class="text-container">これは、テキストのボックスです。テキストのボックスは、divタグで囲むことで作ることができます。テキストボックスを作る都合上、分量は多めにしておいています。</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+.message{
+    margin-left: 50%;
+}
+
+.center-message {
+    text-align: center;
+}
+
+.image {
+    width: 30%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mini {
+    margin-left: 10px
+}
+
+.grid-item {
+    width: 100%;
+    /* grid-item の幅を 100% に設定することで、グリッド内の各アイテムがその列の幅に合わせて広がるようになります。
+    もし、.imageの時のwidth: 30%;のままgridを使用すると、各画像はgridの列の中でもさらに30%の幅となります。 */
+}
+
+.container-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); の意味は、グリッドで3列を作り、各列の幅を均等(1fr)にすることです。
+    もし、grid-template-columns: 1fr 2fr;にしたら、1列目は利用可能なスペースの 1/3 を、2列目は 2/3 を占めます。
+    つまり、fr は比率を表します */
+    gap: 10px;
+    /* gap はグリッドの行と列の間のスペースを指定します。 */
+}
+
+/*ここからは、縦方向や横方向にそろえるための説明コードです*/
+
+.set{
+    display: flex;
+}
+
+.box {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+}
+
+.content-center {
+  display: flex;
+  align-items: center; /* 縦方向の中央揃え */
+}
+
+.text-zone{
+    display: flex;
+    gap: 10px; /* flexの子要素の間隔 */
+    align-items: stretch;
+}
+
+.text-box{
+    background-color: #ebcdcd;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
